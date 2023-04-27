@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Seller Admin page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Seller Admin page</h1>
+    </header>
+
+    <section class="container">
+      <form id="my-form">
+        <h1>Add Product</h1>
+        <div class="msg"></div>
+        <div>
+          <label for="name">Product Name:</label>
+          <input type="text" id="name">
+        </div>
+        <div>
+          <label for="email">Selling Price:</label>
+          <input type="text" id="price">
+        </div>
+        <div>
+          <label for="name">Category:</label>
+          <input list="categories" id="category">
+
+          <datalist id="categories">
+            <option value="Electronic Items">
+            <option value="Food Items">
+            <option value="Skincare Items">
+          </datalist>
+        </div>
+        <input class="btn" type="submit" value="Submit">
+      </form>
+      <div>
+        <h1>Products</h1>
+      </div>
+      <div>
+        <h4>Electronic Items</h4>
+      </div>
+      <ul id="electronicproducts"></ul>
+      <div>
+        <h4>Food Items</h4>
+      </div>
+      <ul id="foodproducts"></ul>
+      <div>
+        <h4>Skincare Items</h4>
+      </div>
+      <ul id="skincareproducts"></ul>
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
